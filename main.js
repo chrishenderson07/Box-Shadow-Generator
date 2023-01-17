@@ -6,6 +6,8 @@ const blurRadius = document.querySelector('#blur-radius')
 const spreadRadius = document.querySelector('#spread-radius')
 const colorPick = document.querySelector('#color')
 
+/* Copy to clipboard button */
+const copyButton = document.querySelector('#copy-button')
 /* Capturar o Elemento  */
 
 const shadowElement = document.querySelector('.element')
@@ -55,4 +57,12 @@ spreadRadius.oninput = () => {
 colorPick.oninput = () => {
 	colorShadow = getShadowColor(colorShadow, colorPick)
 	document.body.style.setProperty('--bx-sd-color', colorShadow)
+}
+
+copyButton.onclick = () => {
+	navigator.clipboard.writeText(
+		`box-shadow: ${horizontalShadow} ${verticalShadow} ${blurRadiusShadow} ${spreadRadiusShadow} ${colorShadow}`,
+	)
+
+	alert('Copied to clipboard')
 }

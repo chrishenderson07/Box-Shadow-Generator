@@ -16,7 +16,8 @@
 	box-sizing: border-box;
 }
 
-body {
+body,
+button {
 	font-size: 1.6rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
@@ -37,14 +38,14 @@ main {
 	background: whitesmoke;
 
 	width: 50rem;
-	padding: 2.2rem;
+	padding: 2rem;
 	border-radius: 12px;
 	box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.1);
 }
 
 .box {
 	width: 100%;
-	height: 350px;
+	height: 300px;
 	background-color: rgb(243, 244, 246);
 
 	display: grid;
@@ -75,17 +76,38 @@ main {
 }
 
 .col1,
-.col2 {
+.col2,
+.col3,
+.col4 {
 	display: flex;
 	flex-direction: column;
 
 	gap: 1.2rem;
 }
-.col3 {
+/* .col3 {
 	margin: 2rem 0 0 0;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+} */
+
+.col3 {
+	margin-top: 1.6rem;
+}
+
+#copy-button {
+	border-radius: 6px;
+	border: solid 1px rgb(131, 131, 131);
+	width: 50%;
+	margin: 0 auto;
+	padding: 8px;
+
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+#copy-button:hover {
+	background-color: rgb(77, 184, 0);
+	color: #fff;
 }
 
 /* Inputs Style */
@@ -118,9 +140,10 @@ input::-webkit-slider-runnable-track {
 }
 
 input[type='color'] {
-	width: 20%;
+	width: 50%;
 	height: 50px;
 	padding: 0.8rem 1.2rem;
+	margin: 0 auto;
 
 	font-size: 1.6rem;
 	border-radius: 0.6rem;
@@ -137,6 +160,6 @@ input[type='color'] {
 	}
 
 	input[type='color'] {
-		width: 30%;
+		width: 50%;
 	}
 }
